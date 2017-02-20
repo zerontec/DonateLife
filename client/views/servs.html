@@ -1,0 +1,129 @@
+ <main>
+  
+       <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Social Services</h2>
+                    <p>social services, you need some help, simply fill out the form other heroes will come to the rescue, then you can be your one to help
+               
+                    </p>
+                </div>
+               <div>
+                <a class="btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Need help</a>
+
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+    </section><!--/#cta-->
+ 
+       <div class="container">
+        	<div class="row">
+        		 <div class="col-xs-6 ">
+        			<!--First review-->
+    <div class="media" "viewport" sf-virtual-repeat="serv in  servs | filter:search">
+        <a class="media-left waves-light" ui-sref="app.needDetail({id:serv._id})">
+            <img class="rounded-circle" src="/images/touch1.jpg" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+            <h5 class="media-heading">{{serv.name}}</h5>
+            <H5>{{serv.asunto}}</H5>
+            
+            
+        </div>
+    </div>
+        			<hr>
+        			<ul class="list-unstyled">
+                      
+                      
+                      
+                      
+                       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" ng-submit="submitServ()">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title w-100" id="myModalLabel">Solicita tu ayuda </h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+               <form >
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.name.$error.required && !donorForm.name.$pristine }">
+        <i class="fa fa-user prefix"></i>
+        <input type="text" id="name" name="name" ng-model=" serv.name"  required  class="form-control">
+        <label for="form3">Your name</label>
+    </div>
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.email.$pristine }">
+        <i class="fa fa-heartbeat prefix"></i>
+        <input type="text" id="asunto" name="asunto" ng-model=" serv.asunto"  class="form-control">
+        <label for="form2">Asunto</label>
+    </div>
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.location.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-map-o prefix"></i>
+        <input type="text" id="need" name="need" ng-model="serv.need" required class="form-control">
+        <label for="form34">Tu requerimiento</label>
+    </div>
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-envelope prefix"></i>
+        <textarea type="text" id="email" name="Email" ng-model="serv.email" required class="md-textarea"></textarea>
+        <label for="form8">Email</label>
+    </div>
+    
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-phone prefix"></i>
+        <textarea type="text" id="telf" name="telf" ng-model="serv.telf" required class="md-textarea"></textarea>
+        <label for="form8">Telf</label>
+    </div>
+ 
+
+
+
+    <div class="text-xs-center-mio">
+        <button class="btn btn-default" type="submit"  ng-disabled="commentForm.$invalid">Hero</button>
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+        <div class="call">
+            <br>
+            <p>Thakyou
+                <br>
+                <span><i class="fa fa-phone"> </i></span> </p>
+        </div>
+    </div>
+    
+    	</form>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+               
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+                        
+                        
+</div>
+                         
+                         
+                          
+                           
+                            
+                             
+                             
+ 	       	
+      
+        
+    	
+    	
+    	
+    	
+    	
+    </main>

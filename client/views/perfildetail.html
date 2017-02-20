@@ -1,0 +1,129 @@
+ <main>
+     <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>DonateLife</h2>
+                    <p>Find Your donor or join the list of your blood type
+               
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+		 
+    </section><!--/#cta-->
+    
+    
+    <hr>
+    <!--=======================Card============-->
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+<div class="card testimonial-card">
+
+    <!--Bacground color-->
+    <div class="card-up default-color-dark">
+    </div>
+
+    <!--Avatar-->
+    <div class="avatar"><img src="/images/1052.jpg">
+    </div>
+
+    <div class="card-block">
+        <!--Name-->
+        <h4 class="card-title">{{mydonor.name}}</h4>
+        <h4>{{mydonor.bloodtype}}</h4>
+         <h4>{{mydonor.email}}</h4>
+          <h4>{{mydonor.location}}</h4>
+        <hr>
+        <!--Quotation-->
+        <p><i class="fa fa-quote-left"></i> You find your possible Donor or become a Donor </p>
+         <a class="btn btn-cyan" href="#"><i class="fa fa-envelope"></i></a>
+           <a class="btn btn-cyan" href="#"><i class="fa fa-phone"></i></a> 
+           <a class="btn btn-cyan" href="#"><i class="fa fa-heart-o"></i>  </a> 
+         <a class="btn btn-cyan" ui-sref="app.find">Back All list</a>
+    </div>
+
+</div>
+<!--/.Card-->
+		</div>
+		<div class="col-sm-6">
+<div class="card testimonial-card">
+
+    <!--Bacground color-->
+    <div class="card-up default-color-dark">
+    </div>
+
+    <!--Avatar-->
+    <div class="avatar"><img src="" class="img-circle img-responsive">
+    </div>
+
+    <div class="card-block">
+        <!--Name-->
+        <h4 class="card-title">Recommendations</h4>
+        <P>Remember that users are not required to Donate </P>
+        
+        <hr>
+       Try to contact you if this list is for something
+        <hr>
+        <!--Quotation-->
+        
+                        
+    </div>
+
+</div>
+		</div>
+		</div>
+		
+		</div>
+<!--/.Card-->
+ 
+ 
+  
+   <div class="container" >
+        <div class="row">
+        <div class="col-sm-4">
+        <input ng-model="search.location">
+       
+<h4>Find it for its location</h4>
+       </div>
+    
+       
+			</div><!--row-->
+		<hr>
+    
+    
+       <ul class="list-group">
+       
+       <li class="list-group-item">
+           <div class="media" ng-repeat="comment in need.comments | orderBy:orderText" >
+        <a class="media-left waves-light" ui-sref="app.perfildetail({id: donor._id})">
+            <img class="img-circle" src="/app/images/CORAZON.jpg" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">{{comments.name}}</h4>
+            <h4 class="media-heading">{{comment.email}}</h4>
+            
+            <h4 class="media-heading">{{comment.location}}</h4>
+        <ul class="rating inline-ul">
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                 <li><i class="fa fa-star amber-text"></i></li>
+                  <li><i class="fa fa-star amber-text"></i></li>
+                
+                
+                
+                
+            </ul>
+            
+        </div>
+       </li>
+    
+      
+    </ul>
+    <hr>
+   
+    
+	</main>

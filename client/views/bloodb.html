@@ -1,0 +1,135 @@
+ <main>
+     <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Blood bank</h2>
+                    <p>Locates blood banks closest to you Collaborates Become Giver and Saves Lives
+               
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    <a class="btn-primary btn-lg" href="https://devsignxyz.typeform.com/to/wYU7Tt" target="_blank">Contact!</a>
+                </div>
+            </div>
+        </div>
+        
+         </section><!--/#cta-->
+        
+        
+         <div class="container">
+        	<div class="row">
+        		 <div class="col-xs-6 ">
+        			
+        			<hr>
+        			<ul class="list-unstyled">
+                        
+                        
+                             <a class="media-left waves-light" >
+            <img class="img-circle" ng-src="serv.image" alt="Generic placeholder image">
+        </a>
+        <div class="media-body" "viewport" >
+           <ul class="" >
+                        <li  sf-virtual-repeat="serv in servs | orderBy:orderText">
+                           <div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">{{serv.name}}</h4>
+    <p class="list-group-item-text">{{serv.email}}</p>
+    <p>{{serv.telf}}</p>
+    <p>{{serv.asunto}}</p>
+    
+    <a href="#" class=" btn-primary btn-lg">Ayudar</a>
+  </a>
+  
+
+</div>
+                          
+                           
+                            
+                             
+                             <footer>{{serv.postedBy.firstname}} {{comment.postedBy.lastname}}, {{comment.updatedAt | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                        </li>
+                    </ul>
+        
+            
+        </div>
+                          </blockquote>
+                        
+                    <hr>
+ 	       		</div><!--col-->
+ 	       		<div class="col-xs-6">
+ 	       			
+ 	       			<!--Form without header-->
+<div class="card">
+    <div class="card-block" ng-submit="submitServ()">
+
+        <!--Header-->
+        <div class="text-xs-center-mio">
+            <h3><i class="fa fa-pencil"></i> Asks for help</h3>
+            <hr class="m-t-2 m-b-2">
+        </div>
+
+        <!--Body-->
+        <p>Simplemente rellena y envia .</p>
+        <br>
+<!--Body-->
+    <form >
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.name.$error.required && !donorForm.name.$pristine }">
+        <i class="fa fa-user prefix"></i>
+        <input type="text" id="name" name="name" ng-model=" serv.name"  required  class="form-control">
+        <label for="form3">Your name</label>
+    </div>
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.email.$pristine }">
+        <i class="fa fa-envelope prefix"></i>
+        <input type="text" id="asunto" name="asunto" ng-model=" serv.asunto"  class="form-control">
+        <label for="form2">Asunto</label>
+    </div>
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.location.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-tag prefix"></i>
+        <input type="text" id="need" name="need" ng-model="serv.need" required class="form-control">
+        <label for="form34">Location</label>
+    </div>
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-pencil prefix"></i>
+        <textarea type="text" id="email" name="Email" ng-model="serv.email" required class="md-textarea"></textarea>
+        <label for="form8">Email</label>
+    </div>
+    
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-pencil prefix"></i>
+        <textarea type="text" id="telf" name="telf" ng-model="serv.telf" required class="md-textarea"></textarea>
+        <label for="form8">Telf</label>
+    </div>
+ 
+
+
+
+    <div class="text-xs-center-mio">
+        <button class="btn btn-default" type="submit"  ng-disabled="commentForm.$invalid">Hero</button>
+        <a href="#/servs" class="btn btn-default">Cancel</a>
+
+        <div class="call">
+            <br>
+            <p>Thakyou
+                <br>
+                <span><i class="fa fa-phone"> </i></span> </p>
+        </div>
+    </div>
+    
+    	</form>
+
+<!--/Form without header-->
+ 	       			
+ 	       		</div>
+        	</div><!--row-->
+        </div><!--Container-->
+    
+    </section><!--/#cta-->
+        <hr>
+        <!--Google map-->
+            
+    	
+    </main>

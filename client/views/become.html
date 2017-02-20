@@ -1,0 +1,111 @@
+
+      <main>
+      
+        <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Become a Donor</h2>
+                    <p>Help and be a true hero
+               
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    
+                </div>
+            </div>
+        </div>
+    </section><!--/#cta-->
+        <hr>
+        
+        
+        
+     
+    
+  <div class="container">
+<div class="card">
+    <div class="card-block" ng-submit="submitDonor()">
+
+        <!--Header-->
+        <div class="text-xs-center-mio">
+            <h3><i class="fa fa-pencil"></i> Become a Donor make the Diferent</h3>
+            <hr class="m-t-2 m-b-2">
+        </div>
+
+        <!--Body-->
+        <p>Simplemente rellena y envia .</p>
+        <br>
+<!--Body-->
+    <form name="donorForm" >
+    <div class="md-form" ng-class="{ 'has-error' :  name.$error.required && !donorForm.name.$pristine }">
+        <i class="fa fa-user prefix"></i>
+        <input type="text" id="name" name="name" ng-model=" mydonor.name"  required  class="form-control">
+        <label for="form3">Your name</label>
+    </div>
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.email.$pristine }">
+        <i class="fa fa-flask prefix"></i>
+        <div class="form-group">
+ 
+  <select class="form-control" id="bloodtype" name="bloodtype" ng-model="mydonor.bloodtype" required >
+    <option ng-click="option(A-)">A-</option>
+    <option ng-click="option(A+)">A+</option>
+    <option>AB-</option>
+    <option>AB+</option>
+    <option >B-</option>
+    <option >B+</option>
+    <option >O-</option>
+    <option >O+</option>
+  </select>
+</div>
+        <label for="form2">Bloodtype</label>
+    </div>
+    
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.location.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-map-o prefix"></i>
+        <input type="text" id="location" name="location" ng-model="mydonor.location" required class="form-control">
+        <label for="form34">Location</label>
+    </div>
+
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-envelope prefix"></i>
+        <textarea type="text" id="email" name="Email" ng-model="mydonor.email" required class="md-textarea"></textarea>
+        <label for="form8">Email</label>
+    </div>
+    
+    <div class="md-form" ng-class="{ 'has-error' : donorForm.email.$error.required && !donorForm.location.$pristine }" >
+        <i class="fa fa-phone prefix"></i>
+        <textarea type="text" id="email" name="telf" ng-model="mydonor.telf" required class="md-textarea"></textarea>
+        <label for="form8">Telf</label>
+    </div>
+ 
+
+
+
+    <div class="text-xs-center-mio">
+        <button class="btn btn-default" type="submit"  ng-disabled="commentForm.$invalid">Hero</button>
+        <a href="#/servs" class="btn btn-default">Cancel</a>
+
+        <div class="call">
+            <br>
+            <p>Thakyou
+                <br>
+                <span><i class="fa fa-phone"> </i></span> </p>
+        </div>
+    </div>
+    
+    	</form>
+
+<!--/Form without header-->
+ 	       			
+ 	       		</div>
+        	</div><!--row-->
+    
+    	
+
+
+</div>
+
+<!--Naked Form-->
+   
+  
